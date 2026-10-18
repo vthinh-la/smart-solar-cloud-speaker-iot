@@ -1,0 +1,40 @@
+# PlatformIO build artifacts & cache
+.pio/
+.pioenvs/
+.piolibdeps/
+.clangd/
+
+# IDE configurations
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Large media files (exceeds GitHub 100MB limit)
+0425.mp4
+*.mp4
+*.mkv
+*.avi
+
+# Espressif Flash Download Tool binaries & temporary logs
+flash_download_tool/
+**/flash_download_tool/
+**/dl_temp/
+**/logs/
+**/bin_tmp/
+*.exe
+
+# Operating system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary & backup files
+*.tmp
+*.bak
+*~

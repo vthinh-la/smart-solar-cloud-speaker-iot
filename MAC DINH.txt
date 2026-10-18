@@ -1,0 +1,47 @@
+($)pin_i2s_bck = 15                                    # GPIO Pin number for I2S "BCK"
+($)pin_i2s_din = 26                                    # GPIO Pin number for I2S "DIN"
+($)pin_i2s_lck = 27                                    # GPIO Pin number for I2S "L(R)CK"
+#
+batt0 = 2600
+batt100 = 2950
+#
+clk_dst = 1                                          # Offset during daylight saving time (hours)
+clk_offset = 1                                       # Offset with respect to UTC in hours
+clk_server = pool.ntp.org                            # Time server to be used
+#
+gpio_00 = uppreset = 1
+gpio_16 = stop
+gpio_17 = resume
+gpio_21 = station = listen.radioking.com/radio/730058/stream/796157
+gpio_25 = upvolume = 2
+gpio_33 = downvolume = 2
+#
+ir_40BF = upvolume = 2
+ir_C03F = downvolume = 2
+#
+mqttbroker = mqtt.eclipseprojects.io
+mqttpasswd = none
+mqttport = 1883
+mqttprefix = LOA CLOUD
+mqttuser = none
+#
+pin_vs_cs = 5                                        # GPIO Pin number for VS1053 "CS"
+pin_vs_dcs = 16                                      # GPIO Pin number for VS1053 "DCS"
+pin_vs_dreq = 4                                     # GPIO Pin number for VS1053 "DREQ"
+#
+preset = 3
+preset_00 = media.kythuatvov.vn:7001/                #  0 - VOV1 VIETNAM
+preset_01 = media.kythuatvov.vn:7003/                #  1 - VOV2 VIETNAM
+preset_02 = media.kythuatvov.vn:7005/                #  2 - VOV3 VIETNAM
+preset_03 = listen.radioking.com/radio/730058/stream/796157  #  3 - Loa Noi
+preset_04 = airspectrum.cdnstream1.com:8008/1604_128 #  4 - Magic 60s Florida 60s Classic Rock
+#
+toneha = 0
+tonehf = 0
+tonela = 3
+tonelf = 15
+#
+volume = 58
+#
+wifi_00 = YOUR_WIFI_SSID/YOUR_WIFI_PASSWORD
+wifi_01 = BACKUP_WIFI_SSID/BACKUP_PASSWORD
