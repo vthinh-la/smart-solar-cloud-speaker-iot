@@ -13,7 +13,8 @@
 *.sublime-project
 *.sublime-workspace
 
-# Large media files (exceeds GitHub 100MB limit)
+# Large media files & raw assets (exceeds GitHub limits or kept local)
+media_raw/
 0425.mp4
 *.mp4
 *.mkv

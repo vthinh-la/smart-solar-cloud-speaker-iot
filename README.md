@@ -15,6 +15,15 @@
   <a href="docs/mqtt-commands.md"><img src="https://img.shields.io/badge/Protocol-MQTT_%26_HTTP_Stream-blueviolet.svg" alt="Protocols"/></a>
 </p>
 
+<p align="center">
+  <img src="docs/images/deployment_field_test.gif" alt="Thử nghiệm thực địa Trạm Loa Năng lượng mặt trời ngoài trời" width="310"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="docs/images/hardware_bench_demo.gif" alt="Mô hình hoạt động hệ thống Loa Cloud" width="460"/>
+</p>
+<p align="center">
+  <em>Hình 1: Thử nghiệm thực địa trạm loa năng lượng mặt trời tại ban công trường ICTU (trái) và vận hành mô hình thử nghiệm điều khiển Cloud (phải)</em>
+</p>
+
 ---
 
 ## 📖 1. Giới Thiệu Dự Án (Introduction)
@@ -81,15 +90,21 @@ graph TD
 
 ---
 
-## ⚡ 3. Sơ Đồ Nguyên Lý Mạch Điện (Hardware Schematic)
+## ⚡ 3. Sơ Đồ Nguyên Lý & Phần Cứng Thực Tế (Hardware Schematic & Real Assembly)
 
-Sơ đồ nguyên lý toàn diện của hệ thống được thiết kế bằng phần mềm **EasyEDA**, tối ưu hóa đường mạch và phân tách hoàn toàn các miền mass tín hiệu:
+Sơ đồ nguyên lý toàn diện của hệ thống được thiết kế bằng phần mềm **EasyEDA**, kết hợp với bo mạch điều khiển và bộ lưu trữ năng lượng mặt trời thực tế:
 
 <p align="center">
-  <img src="docs/images/schematic_circuit.png" alt="Sơ đồ nguyên lý mạch Loa Cloud IoT" width="95%"/>
+  <img src="docs/images/schematic_circuit.png" alt="Sơ đồ nguyên lý mạch Loa Cloud IoT" width="56%"/>
+  &nbsp;&nbsp;
+  <img src="docs/images/hardware_internals.jpg" alt="Phần cứng thực tế bên trong hộp điều khiển" width="40%"/>
+</p>
+<p align="center">
+  <em>Hình 2: Sơ đồ nguyên lý mạch điện EasyEDA (trái) và bố trí module phần cứng thực tế bên trong hộp điều khiển (phải)</em>
 </p>
 
 - Bo mạch tích hợp đầy đủ socket cắm **ESP32 DEVKIT V1**, module giải mã **VS1053B**, module **PAM8403**, 2 biến áp cách ly âm thanh $600:600\Omega$, cổng mở rộng 11-pin ($CN2$), cổng chiết áp xung xoay Rotary Encoder và cầu phân áp ADC.
+- Cụm nguồn bao gồm khối 4 cell pin Li-ion 18650, module 4G UFI, mạch hạ áp DC-DC và công tắc nguồn bảo vệ.
 - File Gerber sẵn sàng cho quy trình đặt mạch công nghiệp (JLCPCB, PCBWay) được lưu trữ tại: [`hardware/pcb/Gerber_ESP32_Cloud_Speaker_PCB.zip`](file:///c:/Users/THINHLA/Desktop/H%E1%BB%86%20TH%E1%BB%90NG%20LOA%20CLOUD%20IOT/hardware/pcb/Gerber_ESP32_Cloud_Speaker_PCB.zip).
 
 ---
@@ -210,7 +225,26 @@ mosquitto_pub -h mqtt.eclipseprojects.io -t "LOA CLOUD/command" -m "mute"
 
 ---
 
-## 👥 9. Tác Giả & Bản Quyền (Author & Licensing)
+## 🏆 9. Giải Thưởng & Thành Tích (Awards & Recognition)
+
+Dự án **"Hệ Thống Loa Cloud IoT"** xuất sắc đạt **Giải Nhì** tại **Chung Kết Cuộc Thi Sáng Tạo Khởi Nghiệp ICTU Năm 2025** do Trường Đại học Công nghệ Thông tin và Truyền thông - Đại học Thái Nguyên tổ chức:
+
+<p align="center">
+  <img src="docs/images/competition_award_ceremony.jpg" alt="Lễ trao giải Chung kết Cuộc thi Sáng tạo Khởi nghiệp ICTU 2025" width="58%"/>
+  &nbsp;&nbsp;
+  <img src="docs/images/project_standee_poster.jpg" alt="Standee giới thiệu dự án STKN-07" width="37%"/>
+</p>
+<p align="center">
+  <em>Hình 3: Lễ trao giải Nhì Sáng tạo Khởi nghiệp ICTU 2025 (trái) và Poster kỹ thuật nhóm STKN-07 - GVHD: ThS. Hoàng Văn Thực (phải)</em>
+</p>
+
+- **Đội thi**: Nhóm STKN-07 (Khoa Kỹ thuật & Công nghệ / Electronic of ICTU).
+- **Giảng viên hướng dẫn**: ThS. Hoàng Văn Thực.
+- **Thành tích**: Giải Nhì toàn trường kèm cúp và giấy chứng nhận sáng tạo khởi nghiệp.
+
+---
+
+## 👥 10. Tác Giả & Bản Quyền (Author & Licensing)
 
 - **Tác giả dự án**: **Lã Văn Thịnh (La Van Thinh)**
 - **Đơn vị công tác**: Khoa Điện tử - Viễn thông, Trường Đại học Công nghệ Thông tin và Truyền thông Thái Nguyên (**Electronic of ICTU**)

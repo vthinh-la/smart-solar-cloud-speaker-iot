@@ -51,8 +51,10 @@ Các địa chỉ luồng phát thanh đã được kiểm thử thực tế và
 
 ## 3. Video Thực Nghiệm Vận Hành (Empirical Video Evidence)
 
-- Hệ thống lưu trữ video thực nghiệm quay trực tiếp thiết bị hoạt động tại hiện trường:
-  - **Tên file gốc**: `0425.mp4`
-  - **Thời lượng**: 00:02:03 (2 phút 03 giây)
-  - **Dung lượng**: ~195 MB (được cấu hình trong `.gitignore` do vượt quá giới hạn 100MB của GitHub).
-  - **Nội dung video**: Ghi lại quá trình thiết bị khởi động, hiển thị thông tin lên màn hình LCD1602, kết nối mạng Wi-Fi 4G, bắt luồng phát thanh từ trạm Cloud và phát âm thanh rõ nét ra loa.
+Hệ thống đã được kiểm thử thực tế cả trong phòng thí nghiệm và ngoài trời:
+- **Thử nghiệm thực địa ngoài trời (Field Deployment)**: Lắp đặt cột loa tích hợp tấm pin năng lượng mặt trời tại ban công trường ICTU phát thanh qua mạng 4G. Xem ảnh động tại [`docs/images/deployment_field_test.gif`](images/deployment_field_test.gif).
+- **Thử nghiệm vận hành mô hình bàn test (Bench Test)**: Kiểm tra bật tắt đèn cảm biến, điều khiển trạm phát cloud và âm thanh loa nén. Xem ảnh động tại [`docs/images/hardware_bench_demo.gif`](images/hardware_bench_demo.gif).
+- **Tập tin video gốc**:
+  - `0425.mp4` (~195 MB, thời lượng 02:03 - video toàn cảnh thử nghiệm).
+  - `VIDEO_DOWNLOAD_*.mp4` (video quay cận cảnh cột loa ngoài trời và mở hộp cúp giải thưởng).
+  - *Tất cả các file video lớn được lưu trữ an toàn trong thư mục `media_raw/` và được loại trừ trong `.gitignore` để tối ưu dung lượng repository.*
